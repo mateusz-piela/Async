@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Async</string>
+    <string name="display_elements_btn">POKAŻ WSZYSTKIE</string>
+    <string name="add_elements_btn">DODAJ NOWY ELEMENT</string>
+    <string name="product_name">Product Name</string>
+    <string name="price">Price</string>
+    <string name="description">Description</string>
+    <string name="add_item">DODAJ ELEMENT</string>
+    <string name="save_btn">ZAPISZ ZMIANY</string>
+    <string name="delete_btn">USUŃ ELEMENT</string>
+</resources>

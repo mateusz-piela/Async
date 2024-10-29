@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="38dp"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/productNameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="@string/product_name" />
+
+    <EditText
+        android:id="@+id/productPriceEditText"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="@string/price"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/productDescriptionEditText"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="@string/description" />
+
+    <Button
+        android:id="@+id/addItemButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="@string/add_item"
+        android:layout_marginTop="16dp" />
+</LinearLayout>
