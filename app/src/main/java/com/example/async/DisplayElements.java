@@ -33,13 +33,13 @@ public class DisplayElements extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.display_elements);
 
+        executorService = Executors.newSingleThreadExecutor();
+        startPeriodicRefresh();
+
         listView = findViewById(R.id.listView);
         elementList = loadData();
         adapter = new ElementAdapter(this, elementList);
         listView.setAdapter(adapter);
-
-        executorService = Executors.newSingleThreadExecutor();
-        startPeriodicRefresh();
 
         listView.setOnItemClickListener((parent, view, position, id) -> {
             Element element = elementList.get(position);
@@ -87,6 +87,5 @@ public class DisplayElements extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        executorService.shutdown();
     }
 }

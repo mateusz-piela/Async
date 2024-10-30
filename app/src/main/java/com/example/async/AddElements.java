@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -34,8 +35,13 @@ public class AddElements extends AppCompatActivity {
                 String price = productPriceEditText.getText().toString();
                 String description = productDescriptionEditText.getText().toString();
 
-                saveData(name, price, description);
-                finish();
+                if (name.isEmpty() || price.isEmpty() || description.isEmpty()) {
+                    Toast.makeText(getApplicationContext(), "Prosze uzupelnic wszystkie dane!", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(getApplicationContext(), "Poprawnie dodano element!", Toast.LENGTH_SHORT).show();
+                    saveData(name, price, description);
+                    finish();
+                }
             }
         });
     }
